@@ -1,19 +1,20 @@
 import type { Metadata } from 'next';
-import { Noto_Sans_JP, Zen_Kaku_Gothic_New, Oswald } from 'next/font/google';
+import { Noto_Sans_JP, Noto_Serif_JP, Oswald } from 'next/font/google';
 import './globals.css';
 
-// 本文用フォント
+// 本文・見出し共通フォント（ゴシック）
 const notoSansJP = Noto_Sans_JP({
   subsets: ['latin'],
+  weight: ['400', '500', '700', '900'],
   variable: '--font-noto-sans-jp',
   display: 'swap',
 });
 
-// 見出し用フォント（読みやすい日本語）
-const zenKakuGothicNew = Zen_Kaku_Gothic_New({
-  weight: ['400', '500', '700'],
+// 明朝体フォント（温故知新感）
+const notoSerifJP = Noto_Serif_JP({
   subsets: ['latin'],
-  variable: '--font-zen-kaku',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-noto-serif-jp',
   display: 'swap',
 });
 
@@ -55,7 +56,7 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
-      className={`${notoSansJP.variable} ${zenKakuGothicNew.variable} ${oswald.variable}`}
+      className={`${notoSansJP.variable} ${notoSerifJP.variable} ${oswald.variable}`}
     >
       <body className="font-sans bg-white text-gray-900">
         {children}

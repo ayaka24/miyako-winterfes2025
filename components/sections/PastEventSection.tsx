@@ -44,22 +44,18 @@ const pastEvents = [
 
 export function PastEventSection() {
   return (
-    <section id="past-event" className="relative bg-white py-24 md:py-32 overflow-hidden">
-      {/* キラキラ装飾 */}
-      <div className="absolute top-28 left-[18%] w-1 h-1 bg-miyako-sky rounded-full animate-sparkle animation-delay-300" />
-      <div className="absolute bottom-36 right-[12%] w-1.5 h-1.5 bg-primary-300 rounded-full animate-sparkle animation-delay-1000" />
-
+    <section id="past-event" className="relative bg-white py-16 md:py-24 overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle japanese="過去の開催" english="PAST EVENT" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
           {pastEvents.map((event) => (
             <div
               key={event.id}
-              className="bg-miyako-light rounded-xl p-5 hover:shadow-md transition-shadow"
+              className="bg-miyako-light rounded-xl p-4 md:p-5 hover:shadow-md transition-shadow"
             >
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-20 h-28 bg-white rounded-lg overflow-hidden shadow-sm">
+              <div className="flex gap-3 md:gap-4">
+                <div className="flex-shrink-0 w-16 h-22 md:w-20 md:h-28 bg-white rounded-lg overflow-hidden shadow-sm">
                   <Image
                     src={event.poster}
                     alt={`${event.number} ポスター`}
@@ -69,13 +65,13 @@ export function PastEventSection() {
                   />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="font-heading font-bold text-gray-800 mb-1">
+                  <p className="font-heading font-bold text-sm md:text-base text-gray-800 mb-1">
                     {event.number} 宮古島冬まつり
                   </p>
-                  <p className="text-miyako-ocean text-sm font-medium mb-2 truncate">
+                  <p className="text-miyako-ocean text-xs md:text-sm font-medium mb-1 truncate">
                     {event.theme}
                   </p>
-                  <div className="text-xs text-gray-500 space-y-0.5">
+                  <div className="text-[10px] md:text-xs text-gray-500">
                     <p>{event.date} ／ {event.visitors}</p>
                   </div>
                   {event.hasSite && (
@@ -83,7 +79,7 @@ export function PastEventSection() {
                       href={event.siteUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 mt-2 text-miyako-ocean text-xs hover:underline"
+                      className="inline-flex items-center gap-1 mt-2 text-miyako-ocean text-[10px] md:text-xs hover:underline"
                     >
                       サイトを見る
                       <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

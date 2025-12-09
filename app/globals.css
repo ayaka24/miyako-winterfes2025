@@ -10,29 +10,35 @@
   body {
     @apply antialiased text-gray-800;
     font-feature-settings: "palt";
-    background-color: #f0f7ff;
+    background-color: #f5f9fa;
+    line-height: 1.8;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading font-bold;
+    line-height: 1.4;
+  }
+
+  p {
+    line-height: 1.9;
   }
 }
 
 @layer utilities {
-  /* キラッとエフェクト - 星型 */
+  /* キラッとエフェクト */
   @keyframes twinkle {
     0%, 100% { 
-      opacity: 0.3;
+      opacity: 0.2;
       transform: scale(0.8);
     }
     50% { 
       opacity: 1;
-      transform: scale(1);
+      transform: scale(1.1);
     }
   }
   
   .animate-twinkle {
-    animation: twinkle 1.5s ease-in-out infinite;
+    animation: twinkle 2s ease-in-out infinite;
   }
   
   .animation-delay-200 {
@@ -43,5 +49,8 @@
   }
   .animation-delay-800 {
     animation-delay: 0.8s;
+  }
+  .animation-delay-1200 {
+    animation-delay: 1.2s;
   }
 }

@@ -10,22 +10,23 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          50: '#f0f7ff',
-          100: '#e0efff',
-          200: '#b9ddff',
-          300: '#7cc4ff',
-          400: '#36a9ff',
-          500: '#0c8ce9',
-          600: '#006fca',
-          700: '#0058a3',
-          800: '#054b87',
-          900: '#0a3f70',
+          50: '#e8f4f8',
+          100: '#d1e9f1',
+          200: '#a3d3e3',
+          300: '#75bdd5',
+          400: '#47a7c7',
+          500: '#2d8fb0',
+          600: '#24728c',
+          700: '#1b5569',
+          800: '#123846',
+          900: '#091c23',
         },
         miyako: {
-          sky: '#7cc4ff',
-          ocean: '#006fca',
-          light: '#f0f7ff',
-          accent: '#ff6b6b',
+          sky: '#5fb3c9',
+          ocean: '#1a6b8a',
+          deep: '#0f4a5f',
+          light: '#e8f4f8',
+          accent: '#e86b5c',
         },
       },
       fontFamily: {
@@ -36,9 +37,12 @@ const config: Config = {
           'sans-serif',
         ],
         heading: [
-          'var(--font-zen-kaku)',
           'var(--font-noto-sans-jp)',
           'sans-serif',
+        ],
+        serif: [
+          'var(--font-noto-serif-jp)',
+          'serif',
         ],
         accent: [
           'var(--font-oswald)',
