@@ -25,7 +25,7 @@ export function ConceptSection() {
           {/* コンセプト文章 */}
           <div className="space-y-6 text-gray-600 mb-10 md:mb-14">
             <p className="text-[15px] md:text-base leading-[1.9] md:leading-[2]">
-              宮古島の<span className="text-miyako-ocean font-semibold">"冬"</span>を盛り上げる、<br />
+              宮古島の<span className="text-miyako-ocean font-semibold">「冬」</span>を盛り上げる、<br />
               みんなでつくるおまつり！
             </p>
             <p className="text-[15px] md:text-base leading-[1.9] md:leading-[2]">
