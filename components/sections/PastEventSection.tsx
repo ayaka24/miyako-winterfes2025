@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { SectionTitle } from '@/components/ui';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const pastEvents = [
   {
     id: 4,
@@ -10,7 +12,7 @@ const pastEvents = [
     visitors: '5,000人',
     siteUrl: 'https://example.com/2024',
     hasSite: true,
-    poster: '/images/past-events/poster-4.png',
+    poster: `${basePath}/images/past-events/poster-4.png`,
   },
   {
     id: 3,
@@ -20,7 +22,7 @@ const pastEvents = [
     visitors: '5,200人',
     siteUrl: 'https://example.com/2023',
     hasSite: true,
-    poster: '/images/past-events/poster-3.png',
+    poster: `${basePath}/images/past-events/poster-3.png`,
   },
   {
     id: 2,
@@ -29,7 +31,7 @@ const pastEvents = [
     date: '2020.2.16',
     visitors: '3,000人',
     hasSite: false,
-    poster: '/images/past-events/poster-2.png',
+    poster: `${basePath}/images/past-events/poster-2.png`,
   },
   {
     id: 1,
@@ -38,7 +40,7 @@ const pastEvents = [
     date: '2019.2.10',
     visitors: '2,300人',
     hasSite: false,
-    poster: '/images/past-events/poster-1.png',
+    poster: `${basePath}/images/past-events/poster-1.png`,
   },
 ];
 

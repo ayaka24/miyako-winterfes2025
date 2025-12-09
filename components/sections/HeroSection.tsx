@@ -1,12 +1,14 @@
 import Image from 'next/image';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a2530]">
       {/* PC用背景画像 */}
       <div className="absolute inset-0 z-0 hidden md:block">
         <Image
-          src="/images/hero/main-visual.png"
+          src={`${basePath}/images/hero/main-visual.png`}
           alt="第5回宮古島冬まつり - 温故知新 - 2026.2.28（土）JTAドーム宮古島"
           fill
           className="object-cover object-center"
@@ -18,7 +20,7 @@ export function HeroSection() {
       {/* スマホ用背景画像 */}
       <div className="absolute inset-0 z-0 block md:hidden">
         <Image
-          src="/images/hero/main-visual-sp.png"
+          src={`${basePath}/images/hero/main-visual-sp.png`}
           alt="第5回宮古島冬まつり - 温故知新 - 2026.2.28（土）JTAドーム宮古島"
           fill
           className="object-cover object-center"
