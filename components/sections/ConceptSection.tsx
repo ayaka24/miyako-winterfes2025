@@ -3,7 +3,7 @@ import { SectionTitle } from '@/components/ui';
 export function ConceptSection() {
   return (
     <section id="concept" className="relative bg-white py-16 md:py-24 overflow-hidden">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle japanese="コンセプト" english="CONCEPT" />
 
         <div className="max-w-3xl mx-auto text-center">

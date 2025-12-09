@@ -45,7 +45,7 @@ const pastEvents = [
 export function PastEventSection() {
   return (
     <section id="past-event" className="relative bg-white py-16 md:py-24 overflow-hidden">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle japanese="過去の開催" english="PAST EVENT" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">

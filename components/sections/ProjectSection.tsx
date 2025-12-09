@@ -36,7 +36,7 @@ const projects = [
 export function ProjectSection() {
   return (
     <section id="project" className="relative bg-white py-16 md:py-24 overflow-hidden">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle japanese="イベント内容" english="PROJECT" />
 
         <p className="text-center text-gray-500 mb-8 max-w-xl mx-auto text-[15px] md:text-base leading-[1.9]">

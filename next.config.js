@@ -1,14 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Cloudflare Pages用の設定
   output: 'export',
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },
-  // 末尾スラッシュを付ける（Cloudflare Pages推奨）
-  trailingSlash: true,
+  basePath: '/miyako-winterfes2025',
+  assetPrefix: '/miyako-winterfes2025/',
 };
 
 module.exports = nextConfig;
-
-
