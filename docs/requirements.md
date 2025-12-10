@@ -160,3 +160,4 @@ export const sponsors: Sponsor[] = [
 - 宮古島の文化要素: 馬、サツマイモ、伝統的な赤瓦屋根、宮古上布
 
 
+

@@ -4,3 +4,4 @@ export function getImagePath(path: string): string {
   return `${basePath}${path}`;
 }
 
+
