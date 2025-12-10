@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { SectionTitle } from '@/components/ui';
+import { useInView } from '@/hooks';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -32,6 +33,7 @@ const photos = [
 
 export function PhotoSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { ref, isInView } = useInView(0.2);
 
   const goToPrevious = () => {
     setCurrentIndex((prev) => (prev === 0 ? photos.length - 1 : prev - 1));
@@ -43,10 +45,12 @@ export function PhotoSection() {
 
   return (
     <section id="photo" className="relative bg-miyako-ocean py-16 md:py-24 overflow-hidden">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle japanese="昨年の様子" english="PHOTO" light />
+      <div ref={ref} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className={`fade-in-up ${isInView ? 'visible' : ''}`}>
+          <SectionTitle japanese="昨年の様子" english="PHOTO" light />
+        </div>
 
-        <div className="relative max-w-4xl mx-auto">
+        <div className={`relative max-w-4xl mx-auto fade-in-up delay-200 ${isInView ? 'visible' : ''}`}>
           <div className="relative aspect-[3/2] bg-black/20 rounded-xl overflow-hidden">
             <Image
               src={photos[currentIndex].src}
@@ -54,6 +58,7 @@ export function PhotoSection() {
               fill
               className="object-cover"
               priority={currentIndex === 0}
+              loading={currentIndex === 0 ? 'eager' : 'lazy'}
             />
           </div>
 

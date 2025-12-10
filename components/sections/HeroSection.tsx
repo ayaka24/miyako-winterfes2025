@@ -29,27 +29,23 @@ export function HeroSection() {
         />
       </div>
 
-      {/* キラキラエフェクト */}
+      {/* キラキラエフェクト - 控えめ版 */}
       <div className="absolute inset-0 z-[1] pointer-events-none overflow-hidden">
-        <div className="absolute top-[15%] left-[10%] w-2 h-2 bg-white rounded-full animate-twinkle opacity-80" />
-        <div className="absolute top-[25%] right-[15%] w-3 h-3 bg-cyan-200 rounded-full animate-twinkle animation-delay-500 opacity-70" />
-        <div className="absolute top-[40%] left-[20%] w-1.5 h-1.5 bg-white rounded-full animate-twinkle animation-delay-200 opacity-90" />
-        <div className="absolute top-[60%] right-[25%] w-2 h-2 bg-cyan-100 rounded-full animate-twinkle animation-delay-800 opacity-60" />
-        <div className="absolute bottom-[30%] left-[15%] w-2.5 h-2.5 bg-white rounded-full animate-twinkle animation-delay-500 opacity-70" />
-        <div className="absolute bottom-[20%] right-[10%] w-1.5 h-1.5 bg-cyan-200 rounded-full animate-twinkle opacity-80" />
-        
-        <svg className="absolute top-[20%] right-[30%] w-4 h-4 text-white/60 animate-twinkle animation-delay-200" viewBox="0 0 24 24" fill="currentColor">
+        {/* 星型キラキラ */}
+        <svg className="absolute top-[12%] left-[10%] w-6 h-6 text-white/70 animate-sparkle-big" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
         </svg>
-        <svg className="absolute top-[50%] left-[8%] w-3 h-3 text-cyan-200/70 animate-twinkle animation-delay-800" viewBox="0 0 24 24" fill="currentColor">
+        <svg className="absolute top-[20%] right-[12%] w-7 h-7 text-cyan-200/60 animate-sparkle-big animation-delay-1000" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
         </svg>
-        <svg className="absolute bottom-[40%] right-[12%] w-5 h-5 text-white/50 animate-twinkle animation-delay-500" viewBox="0 0 24 24" fill="currentColor">
+        <svg className="absolute bottom-[30%] right-[8%] w-5 h-5 text-white/60 animate-sparkle-big animation-delay-2000" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
         </svg>
-        <svg className="absolute top-[70%] left-[30%] w-3 h-3 text-cyan-100/60 animate-twinkle" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
-        </svg>
+
+        {/* 丸い光点 */}
+        <div className="absolute top-[35%] left-[5%] w-2 h-2 bg-white/50 rounded-full animate-twinkle" />
+        <div className="absolute top-[55%] right-[15%] w-2.5 h-2.5 bg-cyan-200/40 rounded-full animate-twinkle animation-delay-800" />
+        <div className="absolute bottom-[20%] left-[20%] w-2 h-2 bg-white/40 rounded-full animate-twinkle animation-delay-500" />
       </div>
 
       {/* スクロール促進（画面下部） */}

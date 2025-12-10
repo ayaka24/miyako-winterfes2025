@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import { SectionTitle } from '@/components/ui';
+import { useInView } from '@/hooks';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -45,16 +48,21 @@ const pastEvents = [
 ];
 
 export function PastEventSection() {
+  const { ref, isInView } = useInView(0.1);
+
   return (
     <section id="past-event" className="relative bg-white py-16 md:py-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle japanese="過去の開催" english="PAST EVENT" />
+      <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className={`fade-in-up ${isInView ? 'visible' : ''}`}>
+          <SectionTitle japanese="過去の開催" english="PAST EVENT" />
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-          {pastEvents.map((event) => (
+          {pastEvents.map((event, index) => (
             <div
               key={event.id}
-              className="bg-miyako-light rounded-xl p-4 md:p-5 hover:shadow-md transition-shadow"
+              className={`bg-miyako-light rounded-xl p-4 md:p-5 hover:shadow-md transition-shadow fade-in-up ${isInView ? 'visible' : ''}`}
+              style={{ transitionDelay: `${(index + 1) * 100}ms` }}
             >
               <div className="flex gap-3 md:gap-4">
                 <div className="flex-shrink-0 w-16 h-22 md:w-20 md:h-28 bg-white rounded-lg overflow-hidden shadow-sm">
@@ -64,6 +72,7 @@ export function PastEventSection() {
                     width={80}
                     height={112}
                     className="object-cover w-full h-full"
+                    loading="lazy"
                   />
                 </div>
                 <div className="flex-1 min-w-0">

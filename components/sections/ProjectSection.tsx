@@ -1,4 +1,7 @@
+'use client';
+
 import { SectionTitle } from '@/components/ui';
+import { useInView } from '@/hooks';
 
 const projects = [
   {
@@ -34,20 +37,25 @@ const projects = [
 ];
 
 export function ProjectSection() {
+  const { ref, isInView } = useInView(0.15);
+
   return (
     <section id="project" className="relative bg-white py-16 md:py-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle japanese="イベント内容" english="PROJECT" />
+      <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className={`fade-in-up ${isInView ? 'visible' : ''}`}>
+          <SectionTitle japanese="イベント内容" english="PROJECT" />
+        </div>
 
-        <p className="text-center text-gray-500 mb-8 max-w-xl mx-auto text-[15px] md:text-base leading-[1.9]">
+        <p className={`text-center text-gray-500 mb-8 max-w-xl mx-auto text-[15px] md:text-base leading-[1.9] fade-in-up delay-100 ${isInView ? 'visible' : ''}`}>
           第5回宮古島冬まつりの3つのエリアをご紹介します。
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <div
               key={project.id}
-              className="bg-miyako-light rounded-xl p-6 md:p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              className={`bg-miyako-light rounded-xl p-6 md:p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 fade-in-up ${isInView ? 'visible' : ''}`}
+              style={{ transitionDelay: `${(index + 2) * 100}ms` }}
             >
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-miyako-ocean/10 text-miyako-ocean flex items-center justify-center mb-4">
                 {project.icon}

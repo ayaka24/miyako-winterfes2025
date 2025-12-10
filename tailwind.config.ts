@@ -25,6 +25,7 @@ const config: Config = {
           sky: '#5fb3c9',
           ocean: '#1a6b8a',
           deep: '#0f4a5f',
+          dark: '#0a2530',
           light: '#e8f4f8',
           accent: '#e86b5c',
         },
@@ -52,11 +53,16 @@ const config: Config = {
       animation: {
         'fade-in': 'fadeIn 0.8s ease-out forwards',
         'bounce-slow': 'bounce 3s infinite',
+        'marquee': 'marquee 30s linear infinite',
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
     },

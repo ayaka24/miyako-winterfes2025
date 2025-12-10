@@ -10,7 +10,7 @@ export function Footer() {
   return (
     <footer className="bg-[#0f3a4a] text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
             <h3 className="font-heading font-bold text-lg mb-2">宮古島冬まつり</h3>
             <p className="text-white/60 text-[13px] md:text-sm leading-[1.8]">
@@ -27,13 +27,6 @@ export function Footer() {
                 </a>
               ))}
             </nav>
-          </div>
-          <div>
-            <p className="text-xs text-white/40 mb-3">CONTACT</p>
-            <p className="text-[13px] md:text-sm text-white/60 mb-2">宮古島冬まつり実行委員会</p>
-            <a href="mailto:info@example.com" className="text-[13px] md:text-sm text-miyako-sky hover:underline">
-              info@example.com
-            </a>
           </div>
         </div>
         <div className="border-t border-white/10 pt-6 text-center">
