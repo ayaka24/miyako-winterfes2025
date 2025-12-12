@@ -4,8 +4,6 @@ import Image from 'next/image';
 import { SectionTitle } from '@/components/ui';
 import { useInView } from '@/hooks';
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
 export function ConceptSection() {
   const { ref, isInView } = useInView(0.2);
 
@@ -14,7 +12,7 @@ export function ConceptSection() {
       {/* 背景写真 */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={`${basePath}/images/last-event/all1.jpeg`}
+          src="/images/last-event/all1.jpeg"
           alt=""
           fill
           className="object-cover"
@@ -63,13 +61,13 @@ export function ConceptSection() {
             </p>
           </div>
 
-          {/* テーマ - 明朝体で温故知新感 */}
+          {/* テーマ */}
           <div className={`bg-white/70 backdrop-blur-sm rounded-xl p-6 md:p-8 fade-in-up delay-300 ${isInView ? 'visible' : ''}`}>
             <p className="text-xs text-gray-400 tracking-widest mb-3">THEME</p>
-            <h3 className="font-serif text-3xl md:text-4xl font-semibold text-gray-800 mb-4 tracking-wider">
-              温故知新
+            <h3 className="font-heading text-2xl md:text-3xl font-bold text-miyako-ocean mb-4">
+              #みんなで作る島の文化祭
             </h3>
-            <p className="font-serif text-gray-600 text-[15px] md:text-base leading-[1.9] md:leading-[2]">
+            <p className="text-gray-600 text-[15px] md:text-base leading-[1.9] md:leading-[2]">
               色んな思いや情熱が集まって<br />
               さらなるパワーと刺激を生み出す🔥
             </p>

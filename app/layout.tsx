@@ -27,14 +27,14 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  title: '第5回 宮古島冬まつり | 温故知新',
+  title: '第5回 宮古島冬まつり | #みんなで作る島の文化祭',
   description:
-    '2026年2月28日（土）JTAドーム宮古島にて開催。伝統と革新が織りなす宮古島の冬祭り。',
+    '2026年2月28日（土）JTAドーム宮古島にて開催。みんなで作る島の文化祭！',
   keywords: ['宮古島', '冬まつり', 'イベント', '沖縄', '2026'],
   openGraph: {
-    title: '第5回 宮古島冬まつり | 温故知新',
+    title: '第5回 宮古島冬まつり | #みんなで作る島の文化祭',
     description:
-      '2026年2月28日（土）JTAドーム宮古島にて開催。伝統と革新が織りなす宮古島の冬祭り。',
+      '2026年2月28日（土）JTAドーム宮古島にて開催。みんなで作る島の文化祭！',
     url: 'https://miyako-winterfes.example.com',
     siteName: '宮古島冬まつり',
     locale: 'ja_JP',
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '第5回 宮古島冬まつり | 温故知新',
+    title: '第5回 宮古島冬まつり | #みんなで作る島の文化祭',
     description:
-      '2026年2月28日（土）JTAドーム宮古島にて開催。伝統と革新が織りなす宮古島の冬祭り。',
+      '2026年2月28日（土）JTAドーム宮古島にて開催。みんなで作る島の文化祭！',
   },
 };
 

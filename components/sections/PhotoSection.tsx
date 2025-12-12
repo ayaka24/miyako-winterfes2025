@@ -5,30 +5,28 @@ import Image from 'next/image';
 import { SectionTitle } from '@/components/ui';
 import { useInView } from '@/hooks';
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
 const photos = [
   // all
-  { id: 1, src: `${basePath}/images/last-event/all1.jpeg`, alt: '会場全体の様子 1' },
-  { id: 2, src: `${basePath}/images/last-event/all2.jpg`, alt: '会場全体の様子 2' },
+  { id: 1, src: '/images/last-event/all1.jpeg', alt: '会場全体の様子 1' },
+  { id: 2, src: '/images/last-event/all2.jpg', alt: '会場全体の様子 2' },
   // arena
-  { id: 3, src: `${basePath}/images/last-event/arena1.jpg`, alt: 'アリーナの様子 1' },
-  { id: 4, src: `${basePath}/images/last-event/arena2.jpg`, alt: 'アリーナの様子 2' },
-  { id: 5, src: `${basePath}/images/last-event/arena3.jpg`, alt: 'アリーナの様子 3' },
-  { id: 6, src: `${basePath}/images/last-event/arena4.jpg`, alt: 'アリーナの様子 4' },
-  { id: 7, src: `${basePath}/images/last-event/arena5.jpg`, alt: 'アリーナの様子 5' },
+  { id: 3, src: '/images/last-event/arena1.jpg', alt: 'アリーナの様子 1' },
+  { id: 4, src: '/images/last-event/arena2.jpg', alt: 'アリーナの様子 2' },
+  { id: 5, src: '/images/last-event/arena3.jpg', alt: 'アリーナの様子 3' },
+  { id: 6, src: '/images/last-event/arena4.jpg', alt: 'アリーナの様子 4' },
+  { id: 7, src: '/images/last-event/arena5.jpg', alt: 'アリーナの様子 5' },
   // food
-  { id: 8, src: `${basePath}/images/last-event/food1.jpeg`, alt: 'フードブースの様子 1' },
-  { id: 9, src: `${basePath}/images/last-event/food2.jpeg`, alt: 'フードブースの様子 2' },
+  { id: 8, src: '/images/last-event/food1.jpeg', alt: 'フードブースの様子 1' },
+  { id: 9, src: '/images/last-event/food2.jpeg', alt: 'フードブースの様子 2' },
   // stage
-  { id: 10, src: `${basePath}/images/last-event/stage1.jpeg`, alt: 'ステージの様子 1' },
-  { id: 11, src: `${basePath}/images/last-event/stage2.jpg`, alt: 'ステージの様子 2' },
-  { id: 12, src: `${basePath}/images/last-event/stage3.jpeg`, alt: 'ステージの様子 3' },
-  { id: 13, src: `${basePath}/images/last-event/stage4.jpg`, alt: 'ステージの様子 4' },
-  { id: 14, src: `${basePath}/images/last-event/stage5.jpg`, alt: 'ステージの様子 5' },
-  { id: 15, src: `${basePath}/images/last-event/stage6.jpg`, alt: 'ステージの様子 6' },
+  { id: 10, src: '/images/last-event/stage1.jpeg', alt: 'ステージの様子 1' },
+  { id: 11, src: '/images/last-event/stage2.jpg', alt: 'ステージの様子 2' },
+  { id: 12, src: '/images/last-event/stage3.jpeg', alt: 'ステージの様子 3' },
+  { id: 13, src: '/images/last-event/stage4.jpg', alt: 'ステージの様子 4' },
+  { id: 14, src: '/images/last-event/stage5.jpg', alt: 'ステージの様子 5' },
+  { id: 15, src: '/images/last-event/stage6.jpg', alt: 'ステージの様子 6' },
   // last
-  { id: 16, src: `${basePath}/images/last-event/last.jpg`, alt: '昨年のフィナーレ' },
+  { id: 16, src: '/images/last-event/last.jpg', alt: '昨年のフィナーレ' },
 ];
 
 export function PhotoSection() {

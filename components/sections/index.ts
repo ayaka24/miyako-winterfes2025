@@ -6,4 +6,3 @@ export { ProjectSection } from './ProjectSection';
 export { PastEventSection } from './PastEventSection';
 export { SponsorSection } from './SponsorSection';
 export { AccessSection } from './AccessSection';
-export { MarqueeGallery } from './MarqueeGallery';
