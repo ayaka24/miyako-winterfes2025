@@ -1,9 +1,12 @@
+import Link from 'next/link';
+
 const footerLinks = [
-  { name: 'コンセプト', href: '#concept' },
-  { name: 'お知らせ', href: '#news' },
-  { name: 'イベント内容', href: '#project' },
-  { name: '協賛企業', href: '#sponsor' },
-  { name: 'アクセス', href: '#access' },
+  { name: 'コンセプト', href: '/#concept' },
+  { name: 'お知らせ', href: '/#news' },
+  { name: 'イベント内容', href: '/#project' },
+  { name: '協賛企業', href: '/#sponsor' },
+  { name: 'アクセス', href: '/#access' },
+  { name: 'お問い合わせ', href: '/contact/' },
 ];
 
 export function Footer() {
@@ -12,7 +15,9 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
-            <h3 className="font-heading font-bold text-lg mb-2">宮古島冬まつり</h3>
+            <Link href="/" className="font-heading font-bold text-lg mb-2 block hover:text-miyako-sky transition-colors">
+              宮古島冬まつり
+            </Link>
             <p className="text-white/60 text-[13px] md:text-sm leading-[1.8]">
               2026.2.28（土）<br />
               JTAドーム宮古島
@@ -22,9 +27,9 @@ export function Footer() {
             <p className="text-xs text-white/40 mb-3">MENU</p>
             <nav className="flex flex-wrap gap-x-4 gap-y-2">
               {footerLinks.map((link) => (
-                <a key={link.name} href={link.href} className="text-[13px] md:text-sm text-white/60 hover:text-white transition-colors">
+                <Link key={link.name} href={link.href} className="text-[13px] md:text-sm text-white/60 hover:text-white transition-colors">
                   {link.name}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>

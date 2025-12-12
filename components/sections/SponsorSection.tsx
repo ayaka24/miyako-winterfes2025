@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { SectionTitle } from '@/components/ui';
 import { useInView } from '@/hooks';
 
@@ -30,15 +31,15 @@ export function SponsorSection() {
               協賛企業・団体様を募集しております。
             </p>
 
-            <a
-              href="mailto:info@example.com"
+            <Link
+              href="/contact/"
               className="inline-flex items-center gap-2 bg-miyako-ocean text-white text-[15px] md:text-base font-medium px-5 py-2.5 rounded-lg hover:bg-miyako-ocean/90 transition-colors"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
               お問い合わせ
-            </a>
+            </Link>
           </div>
         </div>
       </div>

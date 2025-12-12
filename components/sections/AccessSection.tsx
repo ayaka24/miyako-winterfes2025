@@ -16,7 +16,7 @@ export function AccessSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-start">
           <div className="space-y-4 md:space-y-5">
             <div className={`bg-white/10 backdrop-blur-sm rounded-xl p-5 md:p-6 fade-in-up delay-100 ${isInView ? 'visible' : ''}`}>
-              <p className="text-xs text-miyako-sky tracking-wider mb-2">VENUE</p>
+              <p className="text-xs text-miyako-sky tracking-wider mb-2">会場</p>
               <p className="font-heading text-lg md:text-2xl font-bold text-white mb-1">
                 JTAドーム宮古島
               </p>
@@ -26,13 +26,13 @@ export function AccessSection() {
             </div>
 
             <div className={`bg-white/10 backdrop-blur-sm rounded-xl p-5 md:p-6 fade-in-up delay-200 ${isInView ? 'visible' : ''}`}>
-              <p className="text-xs text-miyako-sky tracking-wider mb-2">DATE</p>
+              <p className="text-xs text-miyako-sky tracking-wider mb-2">開催日時</p>
               <p className="text-lg md:text-xl font-bold text-white">2026年2月28日（土）</p>
-              <p className="text-white/70 text-[13px] md:text-sm mt-1">10:00〜18:00（予定）</p>
+              <p className="text-white/70 text-[13px] md:text-sm mt-1">10:30〜19:30</p>
             </div>
 
             <div className={`bg-white/10 backdrop-blur-sm rounded-xl p-5 md:p-6 fade-in-up delay-300 ${isInView ? 'visible' : ''}`}>
-              <p className="text-xs text-miyako-sky tracking-wider mb-3">ACCESS</p>
+              <p className="text-xs text-miyako-sky tracking-wider mb-3">交通アクセス</p>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <span className="w-8 h-8 rounded-lg bg-miyako-sky/20 flex items-center justify-center flex-shrink-0">
